@@ -323,9 +323,9 @@ hr {
   transform: translateY(0);
 }
 .work__img img {
-    display: block;
-    width: 100%;
-    height: auto;
+  width: 450px;   /* or whatever fixed width you want */
+  height: 250px;  /* or auto/aspect-ratio if you want */
+  display: block;
 }
 /*.work__img img:hover {
   transform: scale(1.1);
