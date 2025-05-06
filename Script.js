@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const homeImg = document.querySelector('.home__img');
     setTimeout(() => {
     homeImg.classList.add('visible');
-    }, 1400); // slight delay for smoother effect
+    }, 1400);
     });
 
     const title = document.querySelector('.home__title');
@@ -18,7 +18,6 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
   
-    // Optional: clear old text and start fresh
     title.innerHTML = "";
     typeEffect();
 
@@ -35,3 +34,11 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     workImgs.forEach(img => observer.observe(img));
+
+    const navToggle = document.getElementById('nav-toggle');  // Get the burger icon
+    const navMenu = document.getElementById('nav-menu');  // Get the menu
+
+    // Toggle 'show' class when burger icon is clicked
+    navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show');  // Add/remove 'show' class
+    });

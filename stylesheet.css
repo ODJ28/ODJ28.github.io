@@ -148,10 +148,12 @@ hr {
     top: var(--header-height);
     right: -100%;
     width: 80%;
-    height: 100%;
     padding: 2rem;
     background-color: var(--second-color);
     transition: 0.5s;
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
   }
 }
 .nav__item {
@@ -322,6 +324,7 @@ hr {
   opacity: 1;
   transform: translateY(0);
 }
+
 .work__img img {
   width: 450px;   /* or whatever fixed width you want */
   height: 250px;  /* or auto/aspect-ratio if you want */
@@ -330,6 +333,17 @@ hr {
 /*.work__img img:hover {
   transform: scale(1.1);
 }*/
+@media (max-width: 600px) {
+  .work__img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .work__img img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 .hover-text {
     position: absolute;
@@ -361,6 +375,10 @@ hr {
 
 .courses__container {
   row-gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* ⬅️ this centers the boxes */
+  gap: 2rem;
 }
 
 .courses__text {
